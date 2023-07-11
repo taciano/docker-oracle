@@ -1,6 +1,5 @@
 # Environment Oracle Free
 # Prof. Taciano Balardin
-version: "23c"
 services:
   # Oracle service (label used to access the service container)
   oracle:
