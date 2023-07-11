@@ -3,13 +3,13 @@
 Quick Start <br><br>
 
 Run a new database container (data is removed when the container is removed, but kept throughout container restarts): <br>
-docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br><br>
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br>
 
 Run a new persistent database container (data is kept throughout container lifecycles): <br>
-docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free <br><br>
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free <br>
 
 Reset database SYS and SYSTEM passwords: <br>
-docker exec <container name|id> resetPassword <your password> <br><br>
+docker exec <container name|id> resetPassword <your password> <br>
 
 How to use this image: <br>
 Environment variables <br>
