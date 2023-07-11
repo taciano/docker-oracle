@@ -3,7 +3,7 @@
 Quick Start
 Run a new database container (data is removed when the container is removed, but kept throughout container restarts):
 
-docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br>
 Run a new persistent database container (data is kept throughout container lifecycles):
 
 docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free
