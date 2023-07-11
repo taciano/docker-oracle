@@ -1,31 +1,14 @@
 # docker-oracle
  
 Quick Start
-Run a new database container (data is removed when the container is removed, but kept throughout container restarts):
+Run a new database container (data is removed when the container is removed, but kept throughout container restarts): <br>
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br><br>
 
-docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br>
-Run a new persistent database container (data is kept throughout container lifecycles):
+Run a new persistent database container (data is kept throughout container lifecycles): <br>
+docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free <br><br>
 
-docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free
-Reset database SYS and SYSTEM passwords:
-
-docker exec <container name|id> resetPassword <your password>
-Oracle Database Free on Apple M chips
-Currently, there is no Oracle Database port for ARM chips, hence Oracle Database Free images cannot run on the new Apple M chips via Docker Desktop.
-Fortunately, there are other technologies that can spin up x86_64 software on Apple M chips, such as colima. To run these Oracle Database Free images on Apple M hardware, follow these simple steps:
-
-Install colima (instructions)
-Run colima start --arch x86_64 --memory 4
-Start container as usual
-Users of these images
-We are proud of the following users of these images:
-
-Benthos [c29f81d]
-Hibernate Reactive [0af4ebc]
-Ibis [b568a81]
-Quarkus [546922c]
-Spring Data [3cac9d1]
-If you are using these images and would like to be listed as well, please open an issue on GitHub or reach out on Twitter.
+Reset database SYS and SYSTEM passwords: <br>
+docker exec <container name|id> resetPassword <your password> <br><br>
 
 How to use this image
 Environment variables
