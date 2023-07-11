@@ -1,0 +1,14 @@
+# Environment Oracle Free
+# Prof. Taciano Balardin
+version: "23c"
+services:
+  # Oracle service (label used to access the service container)
+  oracle:
+    # Docker Hub image (feel free to change the tag "latest" to any other available one)
+    image: gvenzl/oracle-free:latest
+    # Provide passwords and other environment variables to container
+    env:
+      ORACLE_PASSWORD: 123456
+    # Forward Oracle port
+    ports:
+      - 1521:1521
