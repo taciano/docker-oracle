@@ -13,7 +13,7 @@ docker exec <container name|id> resetPassword <your password> <br>
 
 How to use this image: <br>
 Environment variables <br>
-Environment variables allow you to customize your container. Note that these variables will only be considered during the database initialization (first container startup).<br><br>
+Environment variables allow you to customize your container. Note that these variables will only be considered during the database initialization (first container startup).<br>
 
 ORACLE_PASSWORD<br>
 This variable is mandatory for the first container startup and specifies the password for the Oracle Database SYS and SYSTEM users.
