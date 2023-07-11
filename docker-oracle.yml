@@ -6,9 +6,15 @@ services:
   oracle:
     # Docker Hub image (feel free to change the tag "latest" to any other available one)
     image: gvenzl/oracle-free:latest
+    container_name: 'oracle'
     # Provide passwords and other environment variables to container
     environment:
       ORACLE_PASSWORD: 123456
     # Forward Oracle port
     ports:
       - 1521:1521
+    networks:
+      - default
+networks:
+    default:
+        driver: bridge
