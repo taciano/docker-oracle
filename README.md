@@ -1,6 +1,6 @@
 # docker-oracle
  
-Quick Start <br><br>
+Quick Start <br>
 
 Run a new database container (data is removed when the container is removed, but kept throughout container restarts): <br>
 docker run -d -p 1521:1521 -e ORACLE_PASSWORD=<your password> gvenzl/oracle-free <br>
