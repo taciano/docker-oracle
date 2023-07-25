@@ -1,19 +1,15 @@
 # Environment Oracle Free
 # Prof. Taciano Balardin
+version: '3.8'
 services:
-  # Oracle service (label used to access the service container)
-  oracle:
-    # Docker Hub image (feel free to change the tag "latest" to any other available one)
+  oracle-db:
     image: gvenzl/oracle-free:latest
-    container_name: 'oracle'
-    # Provide passwords and other environment variables to container
+    container_name: oracle-db
     environment:
-      ORACLE_PASSWORD: 123456
-    # Forward Oracle port
+     - ORACLE_PASSWORD=123456
     ports:
-      - 1521:1521
-    networks:
-      - default
-networks:
-    default:
-        driver: bridge
+      - "1521:1521"
+    volumes:
+      - oracle-data:/ORCL
+volumes:
+  oracle-data:
