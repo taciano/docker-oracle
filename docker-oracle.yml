@@ -6,6 +6,7 @@ services:
     image: gvenzl/oracle-free:latest
     container_name: oracle-db
     environment:
+     - ORACLE_PDB=ORCLCDB
      - ORACLE_PASSWORD=123456
     ports:
       - "1521:1521"
